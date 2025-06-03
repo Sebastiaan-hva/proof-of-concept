@@ -113,6 +113,9 @@ input[type="checkbox"] {
     header ul{
         gap:.8em;
         }
+    .mobile-menu{
+        display: none;
+    }
     input{
         display:none;
     }
@@ -126,7 +129,6 @@ input[type="checkbox"] {
     }
     .header-right{
         order:2;
-        
     }
     .header-alignment {
         margin-left:2%;   
@@ -145,7 +147,7 @@ input[type="checkbox"] {
         margin-left:13%;
     }
     .header-alignment {
-        margin-left:18%;   
+        margin-left:calc(27vw - 100px);   
         /* margin-right:5%; */
     }
 }
