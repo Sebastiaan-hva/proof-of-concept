@@ -99,12 +99,28 @@ header ul{
     }
     .header-logo{
         order:0;
+        margin-left:2%;
     }
     .header-right{
         order:2;
         
     }
     .header-alignment {
-        margin-left:15%;   
+        margin-left:2%;   
+    }
+    header ul li{
+        flex-direction: row;
+        gap:0.3em;
+    }
+}
+
+@media (width > 1260px) {
+ 
+    .header-logo{
+        margin-left:15%;
+    }
+    .header-alignment {
+        margin-left:20%;   
+        /* margin-right:5%; */
     }
 }
