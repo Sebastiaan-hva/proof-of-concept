@@ -84,7 +84,7 @@ header ul{
     }
 }
 
-@media (width < 759px) {
+@media (width <= 759px) {
     .menu-item{
         /* position:absolute; */
         z-index:2;
@@ -109,7 +109,7 @@ input[type="checkbox"] {
     /* height:calc(100vh - 50px); */
 }
 
-@media (width > 760px) {
+@media (width >= 760px) {
     header ul{
         gap:.8em;
         }
@@ -131,7 +131,7 @@ input[type="checkbox"] {
         order:2;
     }
     .header-alignment {
-        margin-left:2%;   
+        margin-left:calc(20px + 10vw);   
     }
     header ul li a{
         flex-direction: row;
@@ -139,15 +139,15 @@ input[type="checkbox"] {
     }
 }
 
-@media (width > 1260px) {
+@media (width >= 1260px) {
     header ul{
         gap:1.5em;
     }
     .header-logo{
-        margin-left:13%;
+        margin-left:calc(30vw - 100px);
     }
     .header-alignment {
-        margin-left:calc(27vw - 100px);   
+        margin-left:calc(22vw - 100px);   
         /* margin-right:5%; */
     }
 }
