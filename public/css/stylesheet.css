@@ -89,14 +89,22 @@ header ul{
 }
 
 @media (width > 760px) {
+ 
     .menu{
         display:none;
     }
     .menu-item{
         display:block;
-        order:2;
+        order:1;
     }
     .header-logo{
         order:0;
+    }
+    .header-right{
+        order:2;
+        
+    }
+    .header-alignment {
+        margin-left:15%;   
     }
 }
