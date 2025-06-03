@@ -83,3 +83,20 @@ header ul{
         font-size:0.9em;
     }
 }
+
+.menu-item{
+    display:none;
+}
+
+@media (width > 760px) {
+    .menu{
+        display:none;
+    }
+    .menu-item{
+        display:block;
+        order:2;
+    }
+    .header-logo{
+        order:0;
+    }
+}
