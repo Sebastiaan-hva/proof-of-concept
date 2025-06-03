@@ -59,7 +59,7 @@ header ul{
     gap:2em;
     /* justify-content: center; */
     background-color: var(--primary-color-funda-1);
-    li{
+    li a{
         margin-left:.5em;
         display:flex;
         flex-direction: column;
@@ -91,7 +91,9 @@ header ul{
 @media (width > 760px) {
  
     .menu{
+        position:absolute;
         display:none;
+
     }
     .menu-item{
         display:block;
@@ -108,7 +110,7 @@ header ul{
     .header-alignment {
         margin-left:2%;   
     }
-    header ul li{
+    header ul li a{
         flex-direction: row;
         gap:0.3em;
     }
