@@ -2,3 +2,48 @@
 body{
     /* background-color: red; */
 }
+
+ /* https://brand.funda.nl/d/d9gw4zTPqYFU/brand-guide#/basics-1/typografie */
+
+@font-face {
+    font-family: "ProximaNova";
+    src: url("/assets/ProximaNova/ProximaNova-Regular_2607783814[2260].otf") format('opentype');
+}
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin:0;
+    padding: 0;
+    
+    font-family: var(--font-funda);
+
+    --font-funda: 'ProximaNova', sans-serif;
+    
+
+
+    /* https://brand.funda.nl/d/d9gw4zTPqYFU/brand-guide#/basics-1/kleur */
+
+    /* primary colors */
+    --primary-color-funda-1: #ff9b21;
+    --primary-color-funda-2: #6a281c;
+    --primary-color-funda-3: #f8f0e6;
+    --primary-color-funda-4: #e5f6ff;
+    --primary-color-funda-5: #2a8fd8;
+    --primary-color-funda-white: #ffffff;
+
+    /* secondary colors */
+    --secondary-color-funda-1: #333333;
+    --secondary-color-funda-2: #64c1ed;
+    --secondary-color-funda-3: #fde9eb;
+    --secondary-color-funda-4: #ebf6e3;
+    --secondary-color-funda-5: #de737d;
+    --secondary-color-funda-6: #599f7e;
+
+    
+}
+
+h1{
+    color:var(--primary-color-funda-1);
+}
