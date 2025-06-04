@@ -63,7 +63,11 @@ nav {
     gap:1.5em;
     /* justify-content: center; */
     background-color: var(--primary-color-funda-1);
-    a{
+    ul{
+        display:flex;
+        flex-direction: row;
+    }
+    a, details{
         margin-left:.5em;
         display:flex;
         flex-direction: column;
@@ -71,12 +75,7 @@ nav {
         text-align: center;
         align-items: center;
     }
-    ul{
-        display:flex;
-        position:absolute;
-        top:-100%;
-        left:0;
-    }
+    
 }
 
 @media (width < 550px) {
@@ -89,7 +88,7 @@ nav {
     nav{
         gap:.5em;
     }
-    a{
+    a, details{
         font-size:0.9em;
     }
 }
@@ -101,23 +100,16 @@ nav {
         top: -100vh;
         left: 0;
         width: 100vw;
-        height: 100vh;
-        transition: 0.3s
+        height: 10vh;
+        transition: 0.3s;
+        display:flex;
+        position:absolute;
+        top:-100%;
+        left:0;
     }
 }
 
-ul:target{
-    margin-top:9vh;
-    position:absolute;
-    transform:translateY(100vh);
-    background-color: var(--primary-color-funda-white);
-    flex-direction: column;
-    align-items: start;
-    a{
-        color:black;
-        
-    }
-}
+
 
 .header-alignment{
     margin-left:calc(50vw - 190px);
@@ -126,18 +118,27 @@ ul:target{
     /* height:calc(100vh - 50px); */
 }
 
+ ul:target{
+    margin-top:9vh;
+    position:absolute;
+    transform:translateY(10vh);
+    background-color: var(--primary-color-funda-white);
+    flex-direction: column;
+    align-items: start;
+    details{
+        color:black;   
+    }
+}
+
 @media (width >= 760px) {
     header nav{
         gap:.8em;
-        }
+    }
     .mobile-menu{
         display: none;
     }
-    input{
-        display:none;
-    }
     .menu-item{
-        display:block;
+        display:inline-block;
         order:1;
     }
     .header-logo{
@@ -154,6 +155,7 @@ ul:target{
         flex-direction: row;
         gap:0.3em;
     }
+   
 }
 
 @media (width >= 1260px) {
