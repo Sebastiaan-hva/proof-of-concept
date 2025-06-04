@@ -107,8 +107,16 @@ nav {
 }
 
 ul:target{
+    margin-top:9vh;
     position:absolute;
     transform:translateY(100vh);
+    background-color: var(--primary-color-funda-white);
+    flex-direction: column;
+    align-items: start;
+    a{
+        color:black;
+        
+    }
 }
 
 .header-alignment{
