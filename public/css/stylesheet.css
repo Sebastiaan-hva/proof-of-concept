@@ -128,12 +128,15 @@ nav {
     gap:1em;
     align-items: start;
     details{
-        color:black;   
+        color:rgb(0, 0, 0);   
         border-block-end: 1px solid #000;
         margin-block: .5rem;
         padding-block: .5rem;
     }
-    
+    details p{
+        color:var(--secondary-color-funda-2);
+        padding:0.5em;
+    }
     /* details::before {
         content: '';
         position: absolute;
