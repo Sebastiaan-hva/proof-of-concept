@@ -1,14 +1,15 @@
 <header>
-    <ul>
-        <li class="menu mobile-menu"><input type="checkbox"><a href=""><img src="/assets/menu.svg" height="24" width="24">Menu</a></li>
+    <nav>
+        <li class="menu mobile-menu"><a href="#jump"><img src="/assets/menu.svg" height="24" width="24">Menu</a></li>
 {% comment %} op mobile open je hier een fullscreen menu met kopen huren verkopen wat op desktop altijd zichtbaar is in de header {% endcomment %}
-        
-        <li class="menu-item"><a>Kopen</a></li>
-        <li class="menu-item"><a>Huren</a></li>
-        <li class="menu-item"><a>Verkopen</a></li>
-        <li class="header-logo"><a><img src="/assets/FDS - Funda Logo.svg" height="35" width="90"></a></li>
-        <li class="header-right header-alignment"><a><img src="/assets/house.svg" height="24" width="24">Mijn Huis</a></li>
-        <li class="header-right"><a><img src="/assets/heart.svg" height="24" width="24">Favorieten</a></li>
-        <li class="header-right"><a><img src="/assets/avatar.svg" height="24" width="24">Inloggen</a></li>
-    </ul>
+        <ul id=jump>
+            <li class="menu-item"><a>Kopen</a></li>
+            <li class="menu-item"><a>Huren</a></li>
+            <li class="menu-item"><a>Verkopen</a></li>
+        </ul>
+        <a class="header-logo"><img src="/assets/FDS - Funda Logo.svg" height="35" width="90"></a>
+        <a class="header-right header-alignment"><img src="/assets/house.svg" height="24" width="24">Mijn Huis</a>
+        <a class="header-right"><img src="/assets/heart.svg" height="24" width="24">Favorieten</a>
+        <a  class="header-right"><img src="/assets/avatar.svg" height="24" width="24">Inloggen</a>
+    </nav>
 </header>

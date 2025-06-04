@@ -44,6 +44,10 @@ body{
     
 }
 
+body{
+    position:relative;
+}
+
 h1{
     color:var(--primary-color-funda-1);
 }
@@ -51,7 +55,7 @@ h1{
 
 /* header */
 
-header ul{
+nav {
     height:60px;
     display:flex;
     flex-direction: row;
@@ -59,7 +63,7 @@ header ul{
     gap:1.5em;
     /* justify-content: center; */
     background-color: var(--primary-color-funda-1);
-    li a{
+    a{
         margin-left:.5em;
         display:flex;
         flex-direction: column;
@@ -67,29 +71,33 @@ header ul{
         text-align: center;
         align-items: center;
     }
+    ul{
+        display:flex;
+        position:absolute;
+        top:-100%;
+        left:0;
+    }
 }
 
 @media (width < 550px) {
-    header ul{
+    nav{
         gap:1em;
     }
 }
 
 @media (width < 450px) {
-    header ul{
+    nav{
         gap:.5em;
     }
-    li a{
+    a{
         font-size:0.9em;
     }
 }
 
 @media (width <= 759px) {
-    .menu-item{
+    nav ul{
         /* position:absolute; */
         z-index:2;
-        display: none;
-        position: absolute;
         top: -100vh;
         left: 0;
         width: 100vw;
@@ -98,8 +106,9 @@ header ul{
     }
 }
 
-input[type="checkbox"] {
-    content:"";
+ul:target{
+    position:absolute;
+    transform:translateY(100vh);
 }
 
 .header-alignment{
@@ -110,7 +119,7 @@ input[type="checkbox"] {
 }
 
 @media (width >= 760px) {
-    header ul{
+    header nav{
         gap:.8em;
         }
     .mobile-menu{
@@ -133,14 +142,14 @@ input[type="checkbox"] {
     .header-alignment {
         margin-left:calc(20px + 10vw);   
     }
-    header ul li a{
+    header nav a{
         flex-direction: row;
         gap:0.3em;
     }
 }
 
 @media (width >= 1260px) {
-    header ul{
+    header nav{
         gap:1.5em;
     }
     .header-logo{
