@@ -72,10 +72,11 @@ nav {
         display:flex;
         flex-direction: column;
         color:var(--primary-color-funda-white);
+    }
+    a{
         text-align: center;
         align-items: center;
     }
-    
 }
 
 @media (width < 550px) {
@@ -121,15 +122,19 @@ nav {
  ul:target{
     margin-top:9vh;
     position:absolute;
-    transform:translateY(6vh);
+    transform:translateY(5vh);
     background-color: var(--primary-color-funda-white);
     flex-direction: column;
     gap:1em;
     align-items: start;
     details{
         color:black;   
+        border-block-end: 1px solid #000;
+        margin-block: .5rem;
+        padding-block: .5rem;
     }
-    details::before {
+    
+    /* details::before {
         content: '';
         position: absolute;
         border-top: 1px solid black;
@@ -143,7 +148,7 @@ nav {
         height: 2px;
         width: 100vw;
         bottom: .5rem;
-    }
+    } */
 }
 
 @media (width >= 760px) {
