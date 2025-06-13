@@ -72,6 +72,7 @@ nav {
         display:flex;
         flex-direction: column;
         color:var(--primary-color-funda-white);
+        
     }
     a{
         text-align: center;
@@ -107,6 +108,8 @@ nav {
         position:absolute;
         top:-100%;
         left:0;
+        /* background-color: var(--primary-color-funda-white); */
+        /* background-color: red; */
     }
 }
 
@@ -120,7 +123,7 @@ nav {
 }
 
  ul:target{
-    margin-top:9vh;
+    margin-top:14vh;
     position:absolute;
     transform:translateY(5vh);
     background-color: var(--primary-color-funda-white);
@@ -137,21 +140,9 @@ nav {
         color:var(--secondary-color-funda-2);
         padding:0.5em;
     }
-    /* details::before {
-        content: '';
-        position: absolute;
-        border-top: 1px solid black;
-        height: 2px;
-        width: 100vw;
+    details, p, summary{
+        /* background-color: var(--primary-color-funda-white); */
     }
-     details::after {
-        content: '';
-        position: absolute;
-        border-top: 1px solid black;
-        height: 2px;
-        width: 100vw;
-        bottom: .5rem;
-    } */
 }
 
 @media (width >= 760px) {
