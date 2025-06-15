@@ -10,7 +10,20 @@
 {% block %}
 
 {% render './partials/header.liquid' %}
-<h1>test </h1>
+
+<h1>{{ house.street }} {{ house.house_nr }}</h1>
+<p>{{ house.description | raw }}</p>
+
+<form action="/house/{{ house.id }}/like" method="POST" style="display:inline;">
+  <button type="submit" style="background:none; border:none; font-size:2em; cursor:pointer;">
+    {% if liked %}
+      ❤️
+    {% else %}
+      🤍
+    {% endif %}
+  </button>
+</form>
+</script>
 
 {% comment %} <p> description: {{ housesResponse.description }} </p> {% endcomment %}
 
