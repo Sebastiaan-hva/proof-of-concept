@@ -11,8 +11,13 @@
 
 {% render './partials/header.liquid' %}
 
+<main>
 <h1>{{ house.street }} {{ house.house_nr }}</h1>
 <p>{{ house.description | raw }}</p>
+
+{% if house.poster_image %}
+  <img src="https://fdnd-agency.directus.app/assets/{{ house.poster_image }}" alt="Afbeelding van het huis" width="350" height="350">
+{% endif %}
 
 <form action="/house/{{ house.id }}/like" method="POST" style="display:inline;">
   <button type="submit" style="background:none; border:none; font-size:2em; cursor:pointer;">
@@ -23,7 +28,7 @@
     {% endif %}
   </button>
 </form>
-</script>
+</main>
 
 {% comment %} <p> description: {{ housesResponse.description }} </p> {% endcomment %}
 
