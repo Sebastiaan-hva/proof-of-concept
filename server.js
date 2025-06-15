@@ -17,6 +17,8 @@ const MESSAGES_URL = 'https://fdnd.directus.app/items/messages'
 
 // MARK: GET ROUTE
 
+// moet images an de huizen nog inladen want die staan in een andere table.
+
 // Route om data van een specifiek huis op te halen 
 app.get('/house/:id', async (req, res) => {
   const houseId = req.params.id
@@ -46,33 +48,37 @@ app.get('/house/:id', async (req, res) => {
 
 // MARK: POST ROUTE
 
-// Toggle like for house
+// Route om like op te slaan
 app.post('/house/:id/like', async (req, res) => {
   const houseId = req.params.id
 
- 
+//  checked eerst of er al een like bestaat voor het huis
+// filtert dan weer
   const likeCheckRes = await fetch(`${MESSAGES_URL}?filter={"from":{"_eq":"like"},"text":{"_contains":"house ${houseId}"}}`)
   const likeCheckJson = await likeCheckRes.json()
   // zorgt ervoor dat het altijd een array is ook al is die leeg.
   const existingLikes = likeCheckJson.data || []
 
   if (existingLikes.length > 0) {
-    // Delete existing like
+    // Als er al een like is verwijder deze
     const likeId = existingLikes[0].id
     await fetch(`${MESSAGES_URL}/${likeId}`, { method: 'DELETE' })
-  } else {
-    // Create new like message
+  } 
+  else {
+   // Als er nog geen like is maak een nieuwe like aan.
     await fetch(MESSAGES_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
+        // geeft aan dat dit bericht een like is.
         from: 'like',
+        // tekst met huis-id om te kijken welke like bij welk huis hoort.
         text: `liked house ${houseId}`
       })
     })
   }
 
-  // Redirect back to house page to update like status
+  // na toggle redirect terug naar de pagina. zou hier nog iets kunnen doen met preventdefault & partial page reloads.
   res.redirect(303, `/house/${houseId}`)
 })
 
@@ -85,6 +91,8 @@ app.listen(app.get('port'), function () {
 
 console.log('-__-')
 
+
+// MARK: OUDE CODE
 
 // app.get('/house/:id', async function (request, response) {
 
