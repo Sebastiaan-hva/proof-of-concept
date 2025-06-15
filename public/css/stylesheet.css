@@ -72,6 +72,7 @@ nav {
         display:flex;
         flex-direction: column;
         color:var(--primary-color-funda-white);
+        z-index: 10;
         
     }
     a{
@@ -111,6 +112,34 @@ nav {
         /* background-color: var(--primary-color-funda-white); */
         /* background-color: red; */
     }
+    ul:target{
+    height:50vh;
+    margin-top:14vh;
+    position:absolute;
+    transform:translateY(-4vh);
+    background-color: var(--primary-color-funda-white);
+    flex-direction: column;
+    gap:1em;
+    align-items: start;
+    z-index: 10;
+    details{
+        color:rgb(0, 0, 0);   
+        border-block-end: 1px solid #000;
+        margin-block: .5rem;
+        padding-block: .5rem;
+    }
+    details:first-of-type{
+        margin-top:3vh;
+    }
+
+    details p{
+        color:var(--secondary-color-funda-2);
+        padding:0.5em;
+    }
+    details, p, summary{
+        background-color: var(--primary-color-funda-white);
+    }
+  }
 }
 
 
@@ -121,34 +150,89 @@ nav {
 .mobile-menu:checked {
     /* height:calc(100vh - 50px); */
 }
-
- ul:target{
-    margin-top:14vh;
-    position:absolute;
-    transform:translateY(5vh);
-    background-color: var(--primary-color-funda-white);
-    flex-direction: column;
-    gap:1em;
-    align-items: start;
-    details{
-        color:rgb(0, 0, 0);   
-        border-block-end: 1px solid #000;
-        margin-block: .5rem;
-        padding-block: .5rem;
-    }
-    details p{
-        color:var(--secondary-color-funda-2);
-        padding:0.5em;
-    }
-    details, p, summary{
-        /* background-color: var(--primary-color-funda-white); */
-    }
+/* 
+details::details-content {
+  opacity: 0;
+  transition:
+    opacity 600ms,
+    content-visibility 400ms allow-discrete;
 }
+
+details[open]::details-content {
+  opacity: 1;
+} */
 
 @media (width >= 760px) {
     header nav{
         gap:.8em;
     }
+      nav {
+        position: relative;
+        z-index: 10;
+    }
+
+    nav details {
+        position: relative;
+        display: inline-block;
+        
+    }
+    
+    nav details summary {
+        cursor: pointer;
+        background-color: var(--primary-color-funda-1);
+        color: var(--primary-color-funda-white);
+        padding: 0.5em 1em;
+        list-style: none;
+        
+    }
+
+    nav details[open] summary + p {
+        /* position: absolute; */
+        top: 100%;
+        left: 0;
+        z-index: 100;
+        background: var(--primary-color-funda-white);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #ccc;
+        width: max-content;
+        min-width: 200px;
+        padding: 0.75em 1em;
+        white-space: nowrap;
+    }
+    nav details[open]:first-of-type{
+        margin-top:11em;
+    }
+    nav details[open]:nth-of-type(2){
+        margin-top:3em;
+    }
+     nav details[open]:nth-of-type(3){
+        margin-top:8em;
+    }
+    nav details[open] p {
+        display: block;
+        background: var(--primary-color-funda-white);
+        color: var(--secondary-color-funda-2);
+        margin: 0;
+        border-top: 1px solid #eee;
+        padding: 0.75em 1em;
+        white-space: nowrap;
+    }
+    nav details[open] p:first-of-type{
+        /* margin-top:10em; */
+    }
+    nav details[open] p:last-of-type {
+        /* padding-top:1em; */
+    }
+    /* Remove top border from first p */
+    nav details[open] summary + p {
+        border-top: none;
+    }
+
+    /* Optional hover effect for all p’s */
+    nav details[open] p:hover {
+        background-color: #f2f2f2;
+    }
+        
     .mobile-menu{
         display: none;
     }
@@ -163,6 +247,7 @@ nav {
     .header-right{
         order:2;
     }
+    /* had dit ook metn container queries kunnen doen */
     .header-alignment {
         margin-left:calc(20px + 10vw);   
     }
@@ -170,7 +255,6 @@ nav {
         flex-direction: row;
         gap:0.3em;
     }
-   
 }
 
 @media (width >= 1260px) {
