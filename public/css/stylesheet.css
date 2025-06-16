@@ -78,6 +78,7 @@ nav {
     a{
         text-align: center;
         align-items: center;
+        
     }
 }
 
@@ -234,7 +235,10 @@ details[open]::details-content {
     nav details[open] p:hover {
         background-color: #f2f2f2;
     }
-        
+    .menu-item details[open]{
+        align-items: flex-start;
+    }
+
     .mobile-menu{
         display: none;
     }
