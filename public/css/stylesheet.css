@@ -116,8 +116,8 @@ nav {
     ul:target{
     height:50vh;
     margin-top:14vh;
-    position:absolute;
-    transform:translateY(-4vh);
+    position: fixed;
+    transform:translateY(92vh);
     background-color: var(--primary-color-funda-white);
     flex-direction: column;
     gap:1em;
