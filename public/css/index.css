@@ -187,12 +187,6 @@ form {
     display: inline-block;
 }
 
-.succes{
-    transform:rotate(360deg);
-    transition-duration: 0.6s;
-	animation-iteration-count: 2;
-}
-
 @keyframes loading{
     0%, 50%, 100%{
         transform:scale(1.05);
@@ -200,4 +194,13 @@ form {
     25%, 75%{
         transform:scale(0.85);
     }
+}
+
+.succes {
+  animation: spin 0.6s ease-in-out 1;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
