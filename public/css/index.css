@@ -176,3 +176,21 @@ main{
 		margin-right:11%;
 	}
 }
+
+@media (max-width:759px) {
+	.slider li:nth-of-type(-n+2) {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: auto auto;
+	}
+
+	/* First image spans full width */
+	.slider li:nth-of-type(-n+2) img:first-of-type {
+		grid-column: 1 / -1;
+		grid-row: 1;
+	}
+
+	/* Other images align in row 2 */
+	.slider li:nth-of-type(-n+2) img:not(:first-of-type) {
+		grid-row: 2;
+	}
+}
