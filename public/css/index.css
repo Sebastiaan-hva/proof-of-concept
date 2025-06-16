@@ -5,21 +5,16 @@
     margin-top:1em;
 	display:flex;
 	gap:1em;
-	
 	overflow-x:auto;
 	scroll-snap-type:x mandatory;
 	overscroll-behavior:contain;
 	scroll-behavior:smooth;
-	
-  scrollbar-width: none;
+  	scrollbar-width: none;
 }
 
 .slider li {
 	scroll-snap-align:center;
 }
-
-
-
 
 .slider {
 	anchor-name:--carousel;
@@ -28,14 +23,14 @@
 .slider {
     scroll-marker-group: after;
 	&::scroll-marker-group {
-		position:absolute;
+	position:absolute;
     position-anchor:--carousel;
 	position-area: bottom center;
     margin-block-start:1em;
     height:.6em;
     display: flex;
     gap: .5em;
-  }
+  	}
 }
 
 .slider li {
@@ -150,4 +145,15 @@
 
 li:nth-of-type(3){
 	grid-template-columns:1fr 1fr 1fr;
+}
+
+form button{
+	background:var(--secondary-color-funda-4);
+	border:none;
+	font-size:1.5em; 
+	cursor:pointer;
+	position:absolute;
+	top:9%;
+	left:87%;
+	border-radius: 100%;
 }

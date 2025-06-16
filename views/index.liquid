@@ -11,6 +11,16 @@
 
 {% render './partials/header.liquid' %}
 
+<form action="/house/{{ house.id }}/like" method="POST">
+  <button type="submit">
+    {% if liked %}
+      ❤️
+    {% else %}
+      🤍
+    {% endif %}
+  </button>
+</form>
+
 <ul class="slider">
   <li data-label="hubje 1">
     
@@ -51,15 +61,7 @@
 
 </ul>
 
-<form action="/house/{{ house.id }}/like" method="POST"">
-  <button type="submit" style="background:none; border:none; font-size:2em; cursor:pointer;">
-    {% if liked %}
-      ❤️
-    {% else %}
-      🤍
-    {% endif %}
-  </button>
-</form>
+
 
 <section class="huis-info">
 <h1>{{ house.street }} {{ house.house_nr }}</h1>
