@@ -19,7 +19,7 @@
     {% endif %} {% endcomment %}
 
     {% for item in house.gallery limit: 5 %}
-    <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="150" height="300">
+    <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="500">
     {% endfor %}
 
   </li>
@@ -30,8 +30,8 @@
       <img src="https://fdnd-agency.directus.app/assets/{{ house.poster_image.id }}" alt="Afbeelding van het huis" width="350" height="350">
     {% endif %} {% endcomment %}
       
-    {% for item in house.gallery %}
-    <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="150" height="250">
+    {% for item in house.gallery limit: 5 %}
+    <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="450">
     {% endfor %}
 
   </li>
@@ -44,7 +44,7 @@
   {% endif %} {% endcomment %}
     
   {% for item in house.gallery %}
-   <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="150" height="250">
+   <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="450">
   {% endfor %}
 
   </li>
