@@ -23,51 +23,31 @@
 
 <ul class="slider">
   <li data-label="hubje 1">
-    
-    {% comment %} {% if house.poster_image %}
-      <img src="https://fdnd-agency.directus.app/assets/{{ house.poster_image.id }}" alt="Afbeelding van het huis" width="350" height="350">
-    {% endif %} {% endcomment %}
-
     {% for item in house.gallery limit: 5 %}
       <picture>
         <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">
         <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="500" loading="eager">
       </picture>
     {% endfor %}
-
   </li>
 
   <li data-label="hubje 2">
-    
-    {% comment %} {% if house.poster_image %}
-      <img src="https://fdnd-agency.directus.app/assets/{{ house.poster_image.id }}" alt="Afbeelding van het huis" width="350" height="350">
-    {% endif %} {% endcomment %}
-      
     {% for item in house.gallery limit: 5 %}
       <picture>
         <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">
         <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="500" loading="lazy">
       </picture>
     {% endfor %}
-
   </li>
-
 
   <li data-label="hubje 3">
-    
-  {% comment %} {% if house.poster_image %}
-    <img src="https://fdnd-agency.directus.app/assets/{{ house.poster_image.id }}" alt="Afbeelding van het huis" width="350" height="350">
-  {% endif %} {% endcomment %}
-    
-  {% for item in house.gallery %}
-    <picture>
-      <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">
-      <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="500" loading="lazy">
-    </picture>
-  {% endfor %}
-
+    {% for item in house.gallery %}
+      <picture>
+        <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">
+        <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="500" loading="lazy">
+      </picture>
+    {% endfor %}
   </li>
-
 </ul>
 
 
