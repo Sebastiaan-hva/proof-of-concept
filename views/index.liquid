@@ -29,7 +29,10 @@
     {% endif %} {% endcomment %}
 
     {% for item in house.gallery limit: 5 %}
-    <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="500">
+      <picture>
+        <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">
+        <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="500" loading="eager">
+      </picture>
     {% endfor %}
 
   </li>
@@ -41,7 +44,10 @@
     {% endif %} {% endcomment %}
       
     {% for item in house.gallery limit: 5 %}
-    <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="450">
+      <picture>
+        <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">
+        <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="500" loading="lazy">
+      </picture>
     {% endfor %}
 
   </li>
@@ -54,7 +60,10 @@
   {% endif %} {% endcomment %}
     
   {% for item in house.gallery %}
-   <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="450">
+    <picture>
+      <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">
+      <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="500" loading="lazy">
+    </picture>
   {% endfor %}
 
   </li>
