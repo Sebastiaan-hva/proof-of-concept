@@ -11,12 +11,12 @@
 
 {% render './partials/header.liquid' %}
 
-<form action="/house/{{ house.id }}/like" method="POST">
+<form action="/house/{{ house.id }}/like" method="POST" data-enhanced="form-{{ id }}">
   <button type="submit">
     {% if liked %}
-      ❤️
+      <img id="like-button" src="/assets/red-heart-icon.svg" height="32" width="32">
     {% else %}
-      🤍
+      <img id="like-button" src="/assets/heart-icon.svg" height="32" width="32">
     {% endif %}
   </button>
 </form>
@@ -64,20 +64,55 @@
 
 
 <section class="huis-info">
-<h1>{{ house.street }} {{ house.house_nr }}</h1>
-<p> {{ house.postal_code }} {{ house.city }}</p>
-<p>{{ house.m2 }} wonen {{ house.m2garden }} tuin {{ house.rooms }} slaapkamers</p>
-<p> € {{ house.price }} k.k. </p>
+  <h1>{{ house.street }} {{ house.house_nr }}</h1>
+  <p> {{ house.postal_code }} {{ house.city }}</p>
+  <p>{{ house.m2 }} wonen {{ house.m2garden }} tuin {{ house.rooms }} slaapkamers</p>
+  <p> € {{ house.price }} k.k. </p>
 
 
-<h2>Omschrijving</h2>
-<p>{{ house.description | raw }}</p>
-
-
-
+  <h2>Omschrijving</h2>
+  <p>{{ house.description | raw }}</p>
 </section>
 
-{% comment %} <p> description: {{ housesResponse.description }} </p> {% endcomment %}
+
+
+<script type="module">
+
+if ('fetch' in window && 'DOMParser' in window) {
+
+  document.addEventListener('submit', async function(event) {
+
+    const form = event.target
+
+    if (!form.hasAttribute('data-enhanced')) {
+      return
+    }
+    event.preventDefault()
+
+    let loadingState = document.querySelector('#like-button');
+    loadingState.classList.add("loading");
+
+    const response = await fetch(form.action, {
+      method: form.method,
+    })
+
+    const responseText = await response.text()
+
+    const parser = new DOMParser()
+    const responseDOM = parser.parseFromString(responseText, 'text/html')
+
+    const newState = responseDOM.querySelector('[data-enhanced="' + form.getAttribute('data-enhanced') + '"]')
+
+    loadingState.classList.remove("loading");
+
+    form.outerHTML = newState.outerHTML
+
+    let succesState =  document.querySelector('#like-button');
+    succesState.classList.add("succes");
+  })
+}
+</script>
+
 
 {% endblock %}
 

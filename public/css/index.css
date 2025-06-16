@@ -1,5 +1,7 @@
 /* test */
 
+/* MARK: Carousel*/
+
 
 .slider {
     margin-top:1em;
@@ -147,7 +149,10 @@ li:nth-of-type(3){
 	grid-template-columns:1fr 1fr 1fr;
 }
 
-form button{
+form {
+	border-radius: 100%;
+	}
+	button{
 	background:var(--secondary-color-funda-4);
 	border:none;
 	font-size:1.5em; 
@@ -155,5 +160,20 @@ form button{
 	position:absolute;
 	top:9%;
 	left:87%;
-	border-radius: 100%;
+	img{
+		
+	}
+}
+
+
+/* MARK: loading & succes state */
+
+.loading{
+    animation:loading 1.4s infinite ease-in-out;
+    display: inline-block;
+}
+
+.succes{
+    transform:rotate(360deg);
+    transition-duration: 0.8s;
 }

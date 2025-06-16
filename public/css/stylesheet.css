@@ -3,6 +3,9 @@ body{
     /* background-color: red; */
 }
 
+
+/* MARK: Typografie*/
+
  /* https://brand.funda.nl/d/d9gw4zTPqYFU/brand-guide#/basics-1/typografie */
 
 @font-face {
@@ -21,7 +24,7 @@ body{
 
     --font-funda: 'ProximaNova', sans-serif;
     
-
+/* MARK: Kleuren*/
 
     /* https://brand.funda.nl/d/d9gw4zTPqYFU/brand-guide#/basics-1/kleur */
 
@@ -53,7 +56,7 @@ h1{
 }
 
 
-/* header */
+/* /* MARK: Header */
 
 nav {
     height:60px;
@@ -113,6 +116,7 @@ nav {
         /* background-color: var(--primary-color-funda-white); */
         /* background-color: red; */
     }
+    /* MARK: Mobile menu openen */
     ul:target{
     height:50vh;
     margin-top:14vh;
@@ -143,25 +147,9 @@ nav {
   }
 }
 
-
-
 .header-alignment{
     margin-left:calc(50vw - 190px);
 }
-.mobile-menu:checked {
-    /* height:calc(100vh - 50px); */
-}
-/* 
-details::details-content {
-  opacity: 0;
-  transition:
-    opacity 600ms,
-    content-visibility 400ms allow-discrete;
-}
-
-details[open]::details-content {
-  opacity: 1;
-} */
 
 @media (width >= 760px) {
     header nav{
