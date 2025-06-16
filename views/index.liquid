@@ -50,18 +50,17 @@
   </li>
 </ul>
 
-<section class="huis-info">
+<section class="house-info">
   <h1>{{ house.street }} {{ house.house_nr }}</h1>
   <p> {{ house.postal_code }} {{ house.city }}</p>
   <p>{{ house.m2 }} wonen {{ house.m2garden }} tuin {{ house.rooms }} slaapkamers</p>
   <p> € {{ house.price }} k.k. </p>
-
-
-  <h2>Omschrijving</h2>
-  <p>{{ house.description | raw }}</p>
 </section>
 
-
+<section class="description">
+    <h2>Omschrijving</h2>
+    <p>{{ house.description | raw }}</p>
+</section>
 
 <script type="module">
 if ('fetch' in window && 'DOMParser' in window) {

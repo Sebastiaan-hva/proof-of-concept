@@ -1,5 +1,46 @@
 /* test */
 
+/* MARK: Form */
+
+form {
+	font-size: .8em;
+	}
+	button{
+		height:36px;
+		width:36px;
+		background:var(--secondary-color-funda-3);
+		border:none;
+		font-size:1.5em; 
+		cursor:pointer;
+		position:absolute;
+		top:9%;
+		left:87%;
+		border-radius: 25% 10%;
+	img{
+		margin-top:0.25em;
+	}
+}
+
+/* MARK: Sections */
+
+section{
+	margin-top:2em;
+	margin-left:2%;
+	margin-right:2%;
+	margin-bottom:1em;
+}
+
+.house-info{
+
+}
+
+.description{
+
+}
+
+
+
+
 /* MARK: Carousel*/
 
 
@@ -157,27 +198,6 @@ li:nth-of-type(3){
 	grid-template-columns:1fr 1fr 1fr;
 }
 
-
-/* MARK: Form */
-
-form {
-	font-size: .8em;
-	}
-	button{
-		height:36px;
-		width:36px;
-		background:var(--secondary-color-funda-3);
-		border:none;
-		font-size:1.5em; 
-		cursor:pointer;
-		position:absolute;
-		top:9%;
-		left:87%;
-		border-radius: 25% 10%;
-	img{
-		margin-top:0.25em;
-	}
-}
 
 
 /* MARK: loading & succes state */
