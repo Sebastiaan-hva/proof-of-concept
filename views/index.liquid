@@ -18,7 +18,7 @@
       <img src="https://fdnd-agency.directus.app/assets/{{ house.poster_image.id }}" alt="Afbeelding van het huis" width="350" height="350">
     {% endif %} {% endcomment %}
 
-    {% for item in house.gallery %}
+    {% for item in house.gallery limit: 5 %}
     <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="150" height="300">
     {% endfor %}
 
