@@ -11,13 +11,45 @@
 
 {% render './partials/header.liquid' %}
 
-<main>
-<h1>{{ house.street }} {{ house.house_nr }}</h1>
-<p>{{ house.description | raw }}</p>
+<ul class="slider">
+  <li data-label="hubje 1">
+    
+    {% comment %} {% if house.poster_image %}
+      <img src="https://fdnd-agency.directus.app/assets/{{ house.poster_image.id }}" alt="Afbeelding van het huis" width="350" height="350">
+    {% endif %} {% endcomment %}
 
-{% if house.poster_image %}
-  <img src="https://fdnd-agency.directus.app/assets/{{ house.poster_image }}" alt="Afbeelding van het huis" width="350" height="350">
-{% endif %}
+    {% for item in house.gallery %}
+    <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="150" height="250">
+    {% endfor %}
+
+  </li>
+
+<ul class="slider">
+  <li data-label="hubje 2">
+    
+    {% comment %} {% if house.poster_image %}
+      <img src="https://fdnd-agency.directus.app/assets/{{ house.poster_image.id }}" alt="Afbeelding van het huis" width="350" height="350">
+    {% endif %} {% endcomment %}
+      
+    {% for item in house.gallery %}
+    <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="150" height="250">
+    {% endfor %}
+
+  </li>
+
+<ul class="slider">
+  <li data-label="hubje 3">
+    
+  {% comment %} {% if house.poster_image %}
+    <img src="https://fdnd-agency.directus.app/assets/{{ house.poster_image.id }}" alt="Afbeelding van het huis" width="350" height="350">
+  {% endif %} {% endcomment %}
+    
+  {% for item in house.gallery %}
+   <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="150" height="250">
+  {% endfor %}
+
+  </li>
+</ul> 
 
 <form action="/house/{{ house.id }}/like" method="POST" style="display:inline;">
   <button type="submit" style="background:none; border:none; font-size:2em; cursor:pointer;">
@@ -28,6 +60,13 @@
     {% endif %}
   </button>
 </form>
+
+<main>
+<h1>{{ house.street }} {{ house.house_nr }}</h1>
+<p>{{ house.description | raw }}</p>
+
+
+
 </main>
 
 {% comment %} <p> description: {{ housesResponse.description }} </p> {% endcomment %}

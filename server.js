@@ -25,7 +25,7 @@ app.get('/house/:id', async (req, res) => {
 
   // Fetch de data van het huis en geef het mee aan de URL
   // dit zou dus nog naar ene andere url aangepast kunnen worden als we die nog krijgen voor de likes.
-  const housesRes = await fetch(`https://fdnd-agency.directus.app/items/f_houses?filter={"id":{"_eq":${houseId}}}`)
+  const housesRes = await fetch(`https://fdnd-agency.directus.app/items/f_houses?fields=*.*&filter={"id":{"_eq":${houseId}}}`)
   const housesJson = await housesRes.json()
   // checked of het huis gevonden wordt. zo niet dan error
   if (!housesJson.data || housesJson.data.length === 0) {
