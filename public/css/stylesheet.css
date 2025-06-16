@@ -227,7 +227,9 @@ details[open]::details-content {
     nav details[open] summary + p {
         border-top: none;
     }
-
+    ul:has details[open]{
+        margin-top:7rem;
+    }
     /* Optional hover effect for all p’s */
     nav details[open] p:hover {
         background-color: #f2f2f2;
@@ -237,8 +239,9 @@ details[open]::details-content {
         display: none;
     }
     .menu-item{
-        display:inline-block;
+        display:flex;
         order:1;
+        align-items:center;
     }
     .header-logo{
         order:0;
