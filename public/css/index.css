@@ -13,8 +13,8 @@ form {
 		font-size:1.5em; 
 		cursor:pointer;
 		position:absolute;
-		top:9%;
-		left:87%;
+		top:calc(9% - 0.5em);
+		left:calc(88vw - 1.25em);
 		border-radius: 25% 10%;
 	img{
 		margin-top:0.25em;
@@ -23,12 +23,54 @@ form {
 
 /* MARK: Sections */
 
+main{
+	@media (min-width: 760px) {
+		display:grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	@media (min-width: 1260px) {
+		margin-left:20%;
+		margin-right:20%;
+	}
+}
+
+main section{
+	@media (min-width: 760px) {
+		max-width: 760px;
+		grid-column:1/3;
+	}
+
+	@media (min-width: 1260px) {
+		max-width: 2fr;
+		
+
+	}
+}
+
+aside{
+	background-color: #F2F2F2;
+	@media (min-width: 1260px) {
+		
+
+	}
+}
+
 section{
 	margin-top:2em;
 	margin-left:2%;
 	margin-right:2%;
 	margin-bottom:1em;
+	@media (min-width: 760px) {
+	/* width: 78%; */
+	/* margin-right:10%; */
+	}
+	@media (min-width: 1260px) {
+		/* width: 78%; */
+		/* margin-right:10%; */
+	}
 }
+
+
 
 .house-info{
 
