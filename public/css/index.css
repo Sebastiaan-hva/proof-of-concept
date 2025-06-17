@@ -8,13 +8,13 @@ form {
 	button{
 		height:36px;
 		width:36px;
-		background:var(--secondary-color-funda-3);
+		background:var(--primary-color-funda-4);
 		border:none;
 		font-size:1.5em; 
 		cursor:pointer;
 		position:absolute;
-		top:calc(9% - 0.5em);
-		left:calc(88vw - 1.25em);
+		top:calc(9% - 1.05em);
+		left:calc(88vw - 1.35em);
 		border-radius: 25% 10%;
 	img{
 		margin-top:0.25em;
@@ -51,12 +51,29 @@ section {
  	border-top: 1px solid var(--primary-color-funda-4);
 }
 
+.faq details{
+	border-top: 1px solid var(--primary-color-funda-4);
+	padding:0.5em;
+	font-weight:550;
+
+}
+
 aside{
 	background-color: #F2F2F2;
-	@media (min-width: 1260px) {
-		
-
+	height:45vh;
+	p{
+		text-align:center;
+		padding-top:5em;
+		color:var(--secondary-color-funda-1)
 	}
+	@media (max-width: 1260px) {
+		height:200px;	
+	}
+}
+
+.description p{
+	padding-top:0.5em;
+	line-height: 1.6;
 }
 
 .house-info-list{
