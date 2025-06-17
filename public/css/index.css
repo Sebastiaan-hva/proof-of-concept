@@ -20,12 +20,12 @@ form {
 		margin-top:0.25em;
 	}
 	@media (max-width: 1260px) {
-		left:93%;
-		top:7%;
+		left:89%;
+		top:5%;
 	}
 	@media (max-width: 760px) {
-		left:95%;
-		top:5%;
+		left:91%;
+		top:3%;
 	}
 }
 
@@ -53,15 +53,18 @@ main section{
 	}
 }
 
+
 section {
  	border-top: 1px solid var(--primary-color-funda-4);
 }
 
-.faq details{
+.faq {
+	margin-bottom:2em;
+	details{
 	border-top: 1px solid var(--primary-color-funda-4);
-	padding:0.5em;
+	padding:0.75em;
 	font-weight:550;
-
+	}
 }
 
 aside{
@@ -319,9 +322,34 @@ li:nth-of-type(3){
 
 footer{
 	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	width:100%;
+	background-color: #F2F2F2;
+	/* gap:1.5em; */
+		@media(min-width: 1260px){
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr;
+		}
 	li{
 		display:flex;
 		flex-direction: column;
-		gap:.5em;
+		@media (min-width: 760px) {
+			margin-left:20%;
+		}
+		@media (min-width: 1260px) {
+			margin-left:20%;
+			margin-right:20%;
+		}
+		p:first-of-type{
+			padding:0.5em;
+			font-weight: 600;
+			margin-top:3em;
+			font-size:1.25em;
+		}
+		p:not(:first-of-type){
+			color:rgb(0, 113, 179);
+			padding:0.25em;
+		}
 	}
 }
