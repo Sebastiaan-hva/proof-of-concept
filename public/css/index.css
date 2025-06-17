@@ -19,6 +19,14 @@ form {
 	img{
 		margin-top:0.25em;
 	}
+	@media (max-width: 1260px) {
+		left:93%;
+		top:7%;
+	}
+	@media (max-width: 760px) {
+		left:95%;
+		top:5%;
+	}
 }
 
 /* MARK: Sections */
@@ -42,8 +50,6 @@ main section{
 
 	@media (min-width: 1260px) {
 		max-width: 2fr;
-		
-
 	}
 }
 
@@ -73,7 +79,7 @@ aside{
 
 .description p{
 	padding-top:0.5em;
-	line-height: 1.6;
+	line-height: 1.4;
 }
 
 .house-info-list{
