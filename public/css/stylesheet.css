@@ -55,6 +55,10 @@ h1{
     color:var(--secondary-color-funda-1);
 }
 
+h1, h2{
+    margin-bottom:0.25em;
+}
+
 
 /* /* MARK: Header */
 

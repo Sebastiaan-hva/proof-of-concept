@@ -55,8 +55,12 @@
   <section class="house-info">
     <h1>{{ house.street }} {{ house.house_nr }}</h1>
     <p> {{ house.postal_code }} {{ house.city }}</p>
-    <p>{{ house.m2 }} wonen {{ house.m2garden }} tuin {{ house.rooms }} slaapkamers</p>
-    <p> € {{ house.price }} k.k. </p>
+    <ul class="house-info-list">
+      <li><img src="/assets/icon-woonoppervlak.svg" height="20">{{ house.m2 }} m² wonen</li> 
+      <li><img src="/assets/icon-tuin.svg" height="20">{{ house.m2_garden }} m² tuin</li> 
+      <li><img src="/assets/icon-slaapkamers.svg" height="20">{{ house.rooms }} slaapkamer(s)</li>
+    </ul>
+      <p class="house-info-prijs"> € {{ house.price }} k.k. <span margin-left:0.5em; style="color:var(--primary-color-funda-5)"> <img src="/assets/calculator.svg" height="22">Wat worden mijn maandlasten? </span></p>
   </section>
 
   <section class="description">
@@ -65,7 +69,7 @@
   </section>
 
   <aside>
-    <p>Reclame</p>
+    <p>Advertentie</p>
   </aside>
 
   <section>
