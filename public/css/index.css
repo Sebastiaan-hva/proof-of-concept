@@ -13,8 +13,8 @@ form {
 		font-size:1.5em; 
 		cursor:pointer;
 		position:absolute;
-		top:calc(9% - 1.05em);
-		left:calc(88vw - 1.35em);
+		top:calc(8% - 1.05em);
+		left:calc(88vw - 1.55em);
 		border-radius: 25% 10%;
 	img{
 		margin-top:0.25em;
@@ -336,6 +336,7 @@ footer ul{
 			grid-template-rows: 1fr;
 		}
 	li{
+		
 		display:flex;
 		flex-direction: column;
 		@media (min-width: 760px) {
@@ -349,10 +350,13 @@ footer ul{
 			font-weight: 600;
 			margin-top:3em;
 			font-size:1.25em;
+			margin-left:0.5em;
+			
 		}
 		p:not(:first-of-type){
 			color:rgb(0, 113, 179);
 			padding:0.25em;
+			margin-left:1em;
 		}
 	}
 }
