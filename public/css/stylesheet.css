@@ -85,7 +85,9 @@ nav {
     a{
         text-align: center;
         align-items: center;
-        
+    }
+    a:hover, summary:hover{
+        background-color: #f0901b;
     }
 }
 
@@ -150,6 +152,8 @@ nav {
     }
   }
 }
+
+
 
 .header-alignment{
     margin-left:calc(50vw - 190px);
