@@ -316,3 +316,12 @@ li:nth-of-type(3){
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+footer{
+	display:grid;
+	li{
+		display:flex;
+		flex-direction: column;
+		gap:.5em;
+	}
+}
