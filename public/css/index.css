@@ -47,6 +47,10 @@ main section{
 	}
 }
 
+section {
+ 	border-top: 1px solid var(--primary-color-funda-4);
+}
+
 aside{
 	background-color: #F2F2F2;
 	@media (min-width: 1260px) {
@@ -116,6 +120,7 @@ section{
 	overscroll-behavior:contain;
 	scroll-behavior:smooth;
   	scrollbar-width: none;
+	
 }
 
 .slider li {
@@ -140,6 +145,7 @@ section{
 }
 
 .slider li {
+	border-bottom: 1px solid var(--primary-color-funda-4);
 	&::scroll-marker {
 		content: '' / attr(data-label);
 		width:1.8em;
