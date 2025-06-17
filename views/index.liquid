@@ -14,9 +14,9 @@
 <form action="/house/{{ house.id }}/like" method="POST" data-enhanced="form-{{ id }}">
   <button type="submit">
     {% if liked %}
-      <img class="like-button" src="/assets/red-heart-icon.svg" height="16">
+      <img class="like-button" src="/assets/red-heart-icon.svg" alt="unlike button" height="16">
     {% else %}
-      <img class="like-button" src="/assets/heart (1).svg" height="22">
+      <img class="like-button" src="/assets/heart (1).svg" alt="like button" height="22">
     {% endif %}
   </button>
 </form>
@@ -26,7 +26,7 @@
     {% for item in house.gallery limit: 5 %}
       <picture>
         <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">
-        <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="500" loading="eager">
+        <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" alt="foto's huis 1" width="500" loading="eager">
       </picture>
     {% endfor %}
   </li>
@@ -35,7 +35,7 @@
     {% for item in house.gallery limit: 5 %}
       <picture>
         <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">
-        <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="500" loading="lazy">
+        <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" alt="foto's huis 2" width="500" loading="lazy">
       </picture>
     {% endfor %}
   </li>
@@ -44,7 +44,7 @@
     {% for item in house.gallery %}
       <picture>
         <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">
-        <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" width="500" loading="lazy">
+        <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" alt="foto's huis 3" width="500" loading="lazy">
       </picture>
     {% endfor %}
   </li>
