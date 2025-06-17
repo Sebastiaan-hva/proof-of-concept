@@ -327,6 +327,10 @@ footer{
 	width:100%;
 	background-color: #F2F2F2;
 	/* gap:1.5em; */
+		@media(min-width: 760px){
+			padding-left:20%;
+			padding-right:20%;
+		}
 		@media(min-width: 1260px){
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 			grid-template-rows: 1fr;
@@ -338,8 +342,7 @@ footer{
 			margin-left:20%;
 		}
 		@media (min-width: 1260px) {
-			margin-left:20%;
-			margin-right:20%;
+			
 		}
 		p:first-of-type{
 			padding:0.5em;
