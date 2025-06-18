@@ -56,6 +56,11 @@ main section{
 
 section {
  	border-top: 1px solid var(--primary-color-funda-4);
+	padding-top:1.5em;
+}
+
+.calc{
+	margin-left:1.0em;
 }
 
 .faq {
@@ -86,15 +91,10 @@ aside{
 }
 
 .house-info-list{
+	max-width:600px;
 	display:flex;
 	flex-direction: row;
 	justify-content: space-around;
-	@media(max-width:450px){
-		flex-direction: column;
-		li{
-			margin-left: 1em;
-		}
-		}
 	li{
 		@media(max-width:450px){
 			margin-right:0.25rem;
@@ -105,9 +105,14 @@ aside{
 			margin-right:0.25em;
 			margin-top:0.5em;
 		}
+	}	
+	
+	@media(max-width:450px){
+	display:block;
+	li{
+		justify-content: left;
+		margin-left:0.5em;
 	}
-	p{
-		
 	}
 }
 
@@ -302,9 +307,12 @@ section{
 		grid-row: 2;
 	}
 }
-
+li:nth-of-type(1), li:nth-of-type(2) {
+	align-self: center;
+}
 li:nth-of-type(3){
 	grid-template-columns:1fr 1fr 1fr;
+	align-self: center;
 }
 
 

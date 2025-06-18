@@ -26,7 +26,7 @@
     {% for item in house.gallery limit: 5 %}
       <picture>
         <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">
-        <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" alt="foto's huis 1" width="500" loading="eager">
+        <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" alt="foto's huis 1" width="600" loading="eager">
       </picture>
     {% endfor %}
   </li>
@@ -35,7 +35,7 @@
     {% for item in house.gallery limit: 5 %}
       <picture>
         <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">
-        <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" alt="foto's huis 2" width="500" loading="lazy">
+        <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" alt="foto's huis 2" width="600" loading="lazy">
       </picture>
     {% endfor %}
   </li>
@@ -47,6 +47,8 @@
         <img src="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}" alt="foto's huis 3" width="500" loading="lazy">
       </picture>
     {% endfor %}
+
+    
   </li>
 </ul>
 
@@ -60,7 +62,7 @@
       <li><img src="/assets/icon-tuin-2.svg" alt="icoon tuin" height="16">{{ house.m2_garden }} m² tuin</li> 
       <li><img src="/assets/icon-slaapkamers.svg" alt="icoon slaapkamer" height="16">{{ house.rooms }} slaapkamer(s)</li>
     </ul>
-      <p class="house-info-prijs">  € {{ house.price }} k.k. <a href=""> <span margin-left:0.5em; style="color:var(--primary-color-funda-5)"> <img src="/assets/calculator.svg" alt="icoon calculator" height="22"> Wat worden mijn maandlasten? </span></p></a>
+      <p class="house-info-prijs">  € {{ house.price }} k.k.  <a href=""> <span margin-left:0.5em; style="color:var(--primary-color-funda-5)"> <img class="calc" src="/assets/calculator.svg" alt="icoon calculator" height="22"> Wat worden mijn maandlasten? </span></p></a>
   </section>
 
   <section class="description">
