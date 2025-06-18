@@ -94,16 +94,17 @@ nav {
 @media (width < 550px) {
     nav{
         gap:1em;
+        a{
+            min-width:66px;
+        }
     }
 }
 
 @media (width < 450px) {
     nav{
-        gap:.5em;
+        gap:.25em;
     }
-    a, details{
-        font-size:0.9em;
-    }
+
 }
 
 @media (width <= 759px) {
@@ -124,15 +125,15 @@ nav {
     }
     /* MARK: Mobile menu openen */
     ul:target{
-    height:50vh;
-    margin-top:14vh;
-    position: fixed;
-    transform:translateY(94vh);
-    background-color: var(--primary-color-funda-white);
-    flex-direction: column;
-    gap:1em;
-    align-items: start;
-    z-index: 10;
+        height:50vh;
+        margin-top:14vh;
+        position: fixed;
+        transform:translateY(94vh);
+        background-color: var(--primary-color-funda-white);
+        flex-direction: column;
+        gap:1em;
+        align-items: start;
+        z-index: 10;
     details{
         color:rgb(0, 0, 0);   
         border-block-end: 1px solid #000;
