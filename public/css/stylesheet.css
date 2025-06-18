@@ -127,7 +127,7 @@ nav {
     height:50vh;
     margin-top:14vh;
     position: fixed;
-    transform:translateY(92vh);
+    transform:translateY(94vh);
     background-color: var(--primary-color-funda-white);
     flex-direction: column;
     gap:1em;

@@ -324,12 +324,16 @@ li:nth-of-type(3){
   100% { transform: rotate(360deg); }
 }
 
-footer ul{
+footer{
+	background-color: #F2F2F2;
+	padding-bottom:2em;
+}
+
+footer .footer-list{
 	display:grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
 	width:100%;
-	background-color: #F2F2F2;
 	/* gap:1.5em; */
 		@media(min-width: 760px){
 			padding-left:20%;
