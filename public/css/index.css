@@ -309,27 +309,10 @@ li:nth-of-type(3){
 
 
 
-/* MARK: loading & succes state */
-
-/* .loading{
-    animation:loading 1.4s infinite ease-in-out;
-    display: inline-block;
-}
-
-@keyframes loading{
-    0%, 50%, 100%{
-        transform:scale(1.05);
-    }
-    25%, 75%{
-        transform:scale(0.85);
-    }
-} */
-
 .loading {
-  animation: loading 1.0s infinite ease-in-out; /* Keep original duration */
-  display: inline-block; /* Essential for transforms to work on img */
-  filter: brightness(100%); /* Initial state for filter */
-  /* Add a default transition for smoother immediate visual feedback if any other styles change quickly */
+  animation: loading 1.0s infinite ease-in-out;
+  display: inline-block; 
+  filter: brightness(100%); 
   transition: transform 0.1s ease-out, filter 0.1s ease-out;
 }
 
@@ -344,39 +327,30 @@ li:nth-of-type(3){
 @keyframes loading {
   0%, 100% {
     transform: scale(1) rotate(0deg);
-    filter: brightness(100%) drop-shadow(0 0 0 rgba(255, 0, 0, 0)); /* No shadow */
+    filter: brightness(100%) drop-shadow(0 0 0 rgba(255, 0, 0, 0));
     opacity: 1;
   }
   25% {
-    transform: scale(1.1) rotate(3deg); /* Slightly bigger, slight rotation */
-    filter: brightness(120%) drop-shadow(0 0 5px rgba(255, 0, 0, 0.4)); /* Subtle glow */
+    transform: scale(1.1) rotate(3deg);
+    filter: brightness(120%) drop-shadow(0 0 5px rgba(255, 0, 0, 0.4)); 
     opacity: 0.95;
   }
   50% {
-    transform: scale(0.95) rotate(-3deg); /* Slightly smaller, slight rotation */
-    filter: brightness(90%) drop-shadow(0 0 2px rgba(255, 0, 0, 0.2)); /* Less bright */
+    transform: scale(0.95) rotate(-3deg);
+    filter: brightness(90%) drop-shadow(0 0 2px rgba(255, 0, 0, 0.2));
     opacity: 1;
   }
   75% {
-    transform: scale(1.05) rotate(2deg); /* Back up a bit */
-    filter: brightness(110%) drop-shadow(0 0 3px rgba(255, 0, 0, 0.3)); /* Subtle glow */
+    transform: scale(1.05) rotate(2deg);
+    filter: brightness(110%) drop-shadow(0 0 3px rgba(255, 0, 0, 0.3));
     opacity: 0.98;
   }
 }
 
-/* .succes {
-  animation: spin 0.6s ease-in-out 1;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-} */
-
 .succes {
-  animation: spin 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1 forwards; /* Adjusted duration and added custom cubic-bezier for a bounce */
-  transform-origin: center center; /* Ensure rotation and scale from the center */
-  filter: brightness(100%) drop-shadow(0 0 0 rgba(255, 0, 0, 0)); /* Initial filter state */
+  animation: spin 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1 forwards; 
+  transform-origin: center center; 
+  filter: brightness(100%) drop-shadow(0 0 0 rgba(255, 0, 0, 0));
 }
 
 @keyframes spin {
