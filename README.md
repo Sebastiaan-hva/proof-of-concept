@@ -26,13 +26,12 @@ De elementen op deze pagina hoeven niet interactief te zijn. Het doel van deze o
 Gebruik geen frameworks. Alleen pure HTML en CSS! Je mag JavaScript gebruiken als het echt nodig is, maar in principe zou je het zonder moeten kunnen.
 
 
-
+## Ontwerpkeuzes
 
 
 ## Gebruik
 
 
-## Kenmerken
 
 
 ## Code conventies
@@ -47,7 +46,9 @@ Gebruik geen frameworks. Alleen pure HTML en CSS! Je mag JavaScript gebruiken al
 ### Code conventies - CSS
 
 
-## Responsive Design
+## Responsive Design (code)
+
+### liquid layout & partials
 
 ### CSS-Carousel
 
@@ -64,6 +65,22 @@ Gebruik geen frameworks. Alleen pure HTML en CSS! Je mag JavaScript gebruiken al
 
 ## Installatie
 
+### 1. Installeer Node.js
+
+Download en installeer de nieuwste versie van Node.js via:  
+[https://nodejs.org/en](https://nodejs.org/en)
+
+### 2. Fork & Clone de repository
+
+- Fork deze repository naar je eigen GitHub-account.
+- Clone jouw fork naar je computer:
+
+### 3. open de repo & install
+- Open de repo met een code editor met een terminal.
+- install de repo met npm install
+- 
+### 4. run de repo
+- Het project wordt nu lokaal gerunt en je krijgt een link van de route in je terminal.
 ## Bronnen
  * [Figma](https://www.figma.com/design/ZV3q9GITY3nRVlvbRPhRtd/Listing-Detail-Page?node-id=0-1&t=5iAdwvexTyLnu5tm-1)
  * Funda brand guide [here](https://brand.funda.nl/).
