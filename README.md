@@ -77,10 +77,12 @@ Download en installeer de nieuwste versie van Node.js via:
 
 ### 3. open de repo & install
 - Open de repo met een code editor met een terminal.
-- install de repo met npm install
-- 
+- install de repo met npm install in de terminal
+
 ### 4. run de repo
-- Het project wordt nu lokaal gerunt en je krijgt een link van de route in je terminal.
+- Start de server met npm start in de terminal
+- je krijgt een link van de route in je terminal.
+  
 ## Bronnen
  * [Figma](https://www.figma.com/design/ZV3q9GITY3nRVlvbRPhRtd/Listing-Detail-Page?node-id=0-1&t=5iAdwvexTyLnu5tm-1)
  * Funda brand guide [here](https://brand.funda.nl/).
