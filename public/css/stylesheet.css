@@ -67,7 +67,7 @@ nav {
     display:flex;
     flex-direction: row;
     align-items: center;
-    gap:1.5em;
+    gap:1.25em;
     /* justify-content: center; */
     background-color: var(--primary-color-funda-1);
     ul{
@@ -75,7 +75,7 @@ nav {
         flex-direction: row;
     }
     a, details{
-        margin-left:.5em;
+        margin-left:.25em;
         display:flex;
         flex-direction: column;
         color:var(--primary-color-funda-white);
@@ -174,7 +174,9 @@ nav {
         display: inline-block;
         
     }
-    
+    nav a   {
+        min-width:76px;
+        }
     nav details summary {
         cursor: pointer;
         background-color: var(--primary-color-funda-1);
@@ -193,7 +195,7 @@ nav {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         border-top: 1px solid #ccc;
         width: max-content;
-        min-width: 200px;
+        min-width: 180px;
         padding: 0.75em 1em;
         white-space: nowrap;
     }
@@ -253,7 +255,7 @@ nav {
     }
     /* had dit ook metn container queries kunnen doen */
     .header-alignment {
-        margin-left:calc(20px + 10vw);   
+        margin-left:calc(25px + 5vw);   
     }
     header nav a{
         flex-direction: row;

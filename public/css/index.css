@@ -13,18 +13,18 @@ form {
 		font-size:1.5em; 
 		cursor:pointer;
 		position:absolute;
-		top:calc(8% - 1.05em);
+		top:calc(5% - 1.05em);
 		left:calc(88vw - 1.55em);
 		border-radius: 25% 10%;
 	img{
 		margin-top:0.25em;
 	}
 	@media (max-width: 1260px) {
-		left:89%;
-		top:5%;
+		left:90%;
+		top:4%;
 	}
 	@media (max-width: 760px) {
-		left:91%;
+		left:93%;
 		top:3%;
 	}
 }
@@ -88,7 +88,17 @@ aside{
 .house-info-list{
 	display:flex;
 	flex-direction: row;
+	justify-content: space-around;
+	@media(max-width:450px){
+		flex-direction: column;
+		li{
+			margin-left: 1em;
+		}
+		}
 	li{
+		@media(max-width:450px){
+			margin-right:0.25rem;
+		}
 		margin-right:0.5rem;
 		font-size:clamp(1em, 1.15em, 1.25em);
 		img{
