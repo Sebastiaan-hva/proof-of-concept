@@ -1,5 +1,9 @@
 # The Funda listing detail page
 
+<img src="https://github.com/user-attachments/assets/facf33cb-832f-4edb-aade-5c35b5c4af85" height=700>
+
+
+
 ## Design challenge
 
 Design challenge
