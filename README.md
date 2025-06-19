@@ -144,6 +144,16 @@ Hiervoor heb ik insparatie gedaan van de css workshop van Sanne om dit te maken 
 ### Header
 Zie issue header: (https://github.com/users/Sebastiaan-hva/projects/7/views/1?pane=issue&itemId=113628984&issue=Sebastiaan-hva%7Cproof-of-concept%7C5)
 
+### Liquid forloop
+https://github.com/Sebastiaan-hva/proof-of-concept/blob/51da0c9007b4189043f85ad4eb94852d569adef4/views/index.liquid#L26-L31
+laad alle images in die in directus staan. met een limit van 5 images voor de eerste 2 slides van de carousel. 
+Het was eigenlijk de bedoeling om meer images te laden amar er zaten 1-6 images per huis in.
+Om meer dan alleen de eerste image in te laden moest ik ook m'n field aanpassen.
+https://github.com/Sebastiaan-hva/proof-of-concept/blob/51da0c9007b4189043f85ad4eb94852d569adef4/server.js#L28
+omdat de gallery verder genest zit in de database.
+
+- Ik gebruik hier ook een picture element om de images te converteren naar avif als het mogelijk is en geef ze een width mee om layout shift te voorkomen.
+
 ## Server-Side Scripting
 
 ### Route
@@ -156,6 +166,12 @@ Uitleg in comments:
 
 https://github.com/Sebastiaan-hva/proof-of-concept/blob/4b826675014fda5432cac3e1f956f7095681a213/server.js#L15-L16
 https://github.com/Sebastiaan-hva/proof-of-concept/blob/4b826675014fda5432cac3e1f956f7095681a213/server.js#L49-L83
+
+## Client side scripting
+
+### loading + succes state form
+
+https://github.com/Sebastiaan-hva/proof-of-concept/blob/51da0c9007b4189043f85ad4eb94852d569adef4/views/index.liquid#L162-L208
 
 ___
 
