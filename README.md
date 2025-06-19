@@ -3,7 +3,6 @@
 <img src="https://github.com/user-attachments/assets/facf33cb-832f-4edb-aade-5c35b5c4af85" height=700>
 
 
-
 ## Design challenge
 
 Design challenge
@@ -18,6 +17,7 @@ Dit is de Listing Detail Page. De opdracht is om deze pagina vanaf nul op te bou
 
 Ik gebruik voor de content de data die door school in directus gezet is.
 
+___
 
 ### Eisen vanuit Funda
 Je implementeert het ontwerp zoals aangegeven in het Figma-bestand.
@@ -32,6 +32,9 @@ Gebruik geen frameworks. Alleen pure HTML en CSS! Je mag JavaScript gebruiken al
 <img src="https://github.com/user-attachments/assets/64df2244-57a1-4ef7-ae7f-4003feaa9657" width=1200>
 
 </details>
+
+___
+
 
 ## Ontwerpkeuzes
 
@@ -52,6 +55,9 @@ De live versie neemt het menu de hele viewport in en op mijn versie valt die ond
 <img src="https://github.com/user-attachments/assets/c190d48e-00bb-487f-89c1-7386cfcbee78" width=250>
 </details> 
 
+___
+
+
 ## Gebruik
 
 
@@ -64,6 +70,7 @@ https://github.com/user-attachments/assets/ced66479-ea3a-41e2-aeb8-b7aad2507fce
 - Je kan een huis liken. 
 - Op mobile een menu openen. 
 
+___
 
 
 ## Code conventies
@@ -79,7 +86,9 @@ https://github.com/user-attachments/assets/ced66479-ea3a-41e2-aeb8-b7aad2507fce
 - Ik probeer nu ook in html/css/js // MARK: te gebruiken om m'n code meer navigeerbaar te maken
 - Tabs zijn 4 spaties (default)
 - ik test mijn werk nog met de lighthouse test / WCAG tests en probeer daarmee m'n code te verbeteren.
-  
+
+  ___
+
 ### Code conventies - Naamgeving
 
 - Al mijn classnames zijn in het engels. (comments schrijf ik wel in het nederlands voor school maar anders ook in het engels)
@@ -87,6 +96,8 @@ https://github.com/user-attachments/assets/ced66479-ea3a-41e2-aeb8-b7aad2507fce
 https://github.com/Sebastiaan-hva/proof-of-concept/blob/57d8a70299eb931ba743725d5bcdda0eb094a21b/public/css/index.css#L93
 - CSS gebruik ik altijd kleine letters met - ertussen; (kebab-case) Vaak gebruik ik ook geen classes omdat ik toch css bestanden per view/route inlaadt dus dan kan ik het element zelf stylen.
 - JS gebruik ik camelCase
+
+___
 
 ### Code conventies - HTML
 
@@ -101,6 +112,8 @@ https://github.com/Sebastiaan-hva/proof-of-concept/blob/57d8a70299eb931ba743725d
 
 - Tussen losstaande elementen / sections laat ik witruimte.
 
+___
+
 ### Code conventies - CSS
 - Ik gebruik binnenin een selector geen enter's tussen subselectors.
 - In principe matched de volgorde van de css elementen van m'n html de volgorde van de css selectors in het css bestand. (als het kan)
@@ -112,11 +125,14 @@ https://github.com/Sebastiaan-hva/proof-of-concept/blob/57d8a70299eb931ba743725d
 - Over spaties tussen property's en values ben ik indifferent.
 - Media queries nesten doe ik vaak niet want in sommige gevallen werkt het niet en vaak levert het meer code op omdat ik heel veel selectors in mediaqueries heb staan.
 
+___
+
 ### Code conventies - JS
 - Hier probeer ik het wel met comments uit te leggen als ik iets nieuws doe/uitprobeer of als het complex is en ik denk dat ik later nog nodig ga hebben.
 - De routes probeer ik een logische naam te geven.
 - Ik zet de post van een route direct onder de get.
 
+___
 
 
 ## Responsive Design / Code
@@ -140,6 +156,8 @@ Uitleg in comments:
 
 https://github.com/Sebastiaan-hva/proof-of-concept/blob/4b826675014fda5432cac3e1f956f7095681a213/server.js#L15-L16
 https://github.com/Sebastiaan-hva/proof-of-concept/blob/4b826675014fda5432cac3e1f956f7095681a213/server.js#L49-L83
+
+___
 
 ## Installatie
 
