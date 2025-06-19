@@ -28,23 +28,73 @@ Gebruik geen frameworks. Alleen pure HTML en CSS! Je mag JavaScript gebruiken al
 
 ## Ontwerpkeuzes
 
+Ik heb grootendeels het design gevolgt van de figma file. Daarin stonden nog geen interacties geprototyped die wel op de live site staan. Dus daar heb ik een beetje mijn ontwerp voor gemaakt.
+Voor de elementen die nog niet in het design zaten zoals de buttons onderaan de carousel heb ik de kleuren van de figma brand site gepakt.
+![image](https://github.com/user-attachments/assets/c6cec880-2b74-434e-ab7e-9dc2709cfc2b)
+De mobile menu is ook wat anders bij mijn versie. 
+De live versie neemt het menu de hele viewport in en op mijn versie valt die onder de header en kan je de rest van de header nog gebruiken en de content eronder zien.
+
+<details><summary>live versie funda:</summary>
+<img src="https://github.com/user-attachments/assets/86f3b1c5-d957-47f2-aa7a-4b98ce793380" width=250>
+</details>
+
+<details><summary>mijn menu:</summary>
+<img src="https://github.com/user-attachments/assets/c190d48e-00bb-487f-89c1-7386cfcbee78" width=250>
+</details> 
 
 ## Gebruik
 
 
-
-
 ## Code conventies
 
+### Algemeen
 
+- Ik gebruik altijd een vaste structuur van de opzet van mijn directory's.
+
+![image](https://github.com/user-attachments/assets/361ed3b3-61c5-4893-89e0-d012f3595279)
+- vanuit server.js wordt er voor alle statisch files genavigeerd vanaf de public folder. Daarin heb ik een assets folder, CSS folder & JS folder.
+- Alle assets en fonts staan in die de asset folder.
+- de server.js staat in de root directory.
+- Ik probeer nu ook in html/css/js // MARK: te gebruiken om m'n code meer navigeerbaar te maken
+- Tabs zijn 4 spaties (default)
+- ik test mijn werk nog met de lighthouse test / WCAG tests en probeer daarmee m'n code te verbeteren.
+  
 ### Code conventies - Naamgeving
 
+- Al mijn classnames zijn in het engels. (comments schrijf ik wel in het nederlands voor school maar anders ook in het engels)
+- Ik probeer bij een classanme descriptive te zijn over het element en de functie en niet over de content binnenin het element. 
+https://github.com/Sebastiaan-hva/proof-of-concept/blob/57d8a70299eb931ba743725d5bcdda0eb094a21b/public/css/index.css#L93
+- CSS gebruik ik altijd kleine letters met - ertussen; (kebab-case) Vaak gebruik ik ook geen classes omdat ik toch css bestanden per view/route inlaadt dus dan kan ik het element zelf stylen.
+- JS gebruik ik camelCase
 
 ### Code conventies - HTML
 
+- Ik heb alle views van de routes in een views map staan en daarin folders voor de layout.liquid en de partials.
+- ![image](https://github.com/user-attachments/assets/9e8056d8-c481-4f30-af6d-952686bf1bb8)
+
+- Ik heb bijvoorbeeld altijd head en de foot in een partial staan.
+- En de header staat bij mijn pagina ook in een partial. 
+- Ik gebruik een layout.liquid zodat ik per pagina makkeljk kan zeggen welke css ik aanlaad omdat het block zelf pas sluit op de view zelf.
+- Ik gebruik ook tabs bij elke laag dat iets in een element genest is.
+- ![image](https://github.com/user-attachments/assets/bdc396b6-bcab-4950-a1d1-91efba930cec)
+
+- Tussen losstaande elementen / sections laat ik witruimte.
 
 ### Code conventies - CSS
+- Ik gebruik binnenin een selector geen enter's tussen subselectors.
+- In principe matched de volgorde van de css elementen van m'n html de volgorde van de css selectors in het css bestand. (als het kan)
+- Ik leg alleen dingen uit die voor mijzelf complex zijn anders heb ik geen comments nodig.
+- Ik laat alleen witruimte tussen selectors die helemaal gesloten zijn.
+- Ik zet elke property op een aparte regel.
+- ![image](https://github.com/user-attachments/assets/d78de234-5d9a-42d5-91e7-b9dee9a616af)
 
+- Over spaties tussen property's en values ben ik indifferent.
+- Media queries nesten doe ik vaak niet want in sommige gevallen werkt het niet en vaak levert het meer code op omdat ik heel veel selectors in mediaqueries heb staan.
+
+### Code conventies - JS
+- Hier probeer ik het wel met comments uit te leggen als ik iets nieuws doe/uitprobeer of als het complex is en ik denk dat ik later nog nodig ga hebben.
+- De routes probeer ik een logische naam te geven.
+- Ik zet de post van een route direct onder de get.
 
 ## Responsive Design (code)
 
