@@ -160,48 +160,45 @@
 </footer>
 
 <script type="module">
-if ('fetch' in window && 'DOMParser' in window) {
-  document.addEventListener('submit', async function(event) {
-    const form = event.target;
+if ('fetch' in window && 'DOMParser' in window) { // Controleren of de browser fetch en DOMParser ondersteunt
+  document.addEventListener('submit', async function(event) { // Luisteren naar het submit-event op het document
+    const form = event.target; // Het formulier dat verzonden werd
+    if (!form.hasAttribute('data-enhanced')) return; // Alleen doorgaan als het formulier een data-enhanced attribuut heeft (dat heeft die :) )
+    event.preventDefault(); // De page reload voorkomen.
 
-    if (!form.hasAttribute('data-enhanced')) return;
-    event.preventDefault();
-
-    const heartIcon = form.querySelector('.like-button');
-
+    const heartIcon = form.querySelector('.like-button'); // Het harticoon / like-knop in het formulier selecteren
     if (heartIcon) {
-      heartIcon.classList.add('loading');
-      heartIcon.classList.remove('succes');
+      heartIcon.classList.add('loading'); // "loading"-klasse toevoegen voor de loading state (wat een goeie classname)
+      heartIcon.classList.remove('succes'); // Eventuele oude "succes"-klasse verwijderen (is nu eigenlijk niet meer nodig volgens mij omdat de class vanzelf weggaat on refesh nu maar was eerst wel nodig)
     }
 
-    const response = await fetch(form.action, {
-      method: form.method,
+    const response = await fetch(form.action, { // Versturen van het formulier met fetch naar de opgegeven URL
+      method: form.method, // Gebruik de opgegeven methode (POST dus)
     });
 
-    const responseText = await response.text();
-    const parser = new DOMParser();
-    const responseDOM = parser.parseFromString(responseText, 'text/html');
-    const newState = responseDOM.querySelector('[data-enhanced="' + form.getAttribute('data-enhanced') + '"]');
+    const responseText = await response.text(); // Antwoord als tekst ophalen
+    const parser = new DOMParser(); // Een nieuwe DOMParser instantie maken
+    const responseDOM = parser.parseFromString(responseText, 'text/html'); // De HTML-respons parsen naar de DOM
+    const newState = responseDOM.querySelector('[data-enhanced="' + form.getAttribute('data-enhanced') + '"]'); // Het bijgewerkte element uit de response halen
 
     if (heartIcon) {
-      setTimeout(() => {
-        heartIcon.classList.remove('loading');
-        heartIcon.classList.add('succes');
+      setTimeout(() => { // Kleine vertraging 
+        heartIcon.classList.remove('loading'); // "loading"-klasse verwijderen
+        heartIcon.classList.add('succes'); // "succes"-klasse toevoegen voor animatie (voor de succes-state)
 
-        const successAnimationDuration = parseFloat(getComputedStyle(heartIcon).animationDuration) * 1000;
+        const successAnimationDuration = parseFloat(getComputedStyle(heartIcon).animationDuration) * 1000; // Duur van de succes-animatie in ms
 
         const handleSuccessAnimationEnd = () => {
-          form.outerHTML = newState.outerHTML;
-          heartIcon.removeEventListener('animationend', handleSuccessAnimationEnd);
+          form.outerHTML = newState.outerHTML; // Formulier vervangen voor de nieuwe HTML uit de response
+          heartIcon.removeEventListener('animationend', handleSuccessAnimationEnd); // Eventlistener sluiten
         };
 
-        heartIcon.addEventListener('animationend', handleSuccessAnimationEnd);
+        heartIcon.addEventListener('animationend', handleSuccessAnimationEnd); // Na de animatie het formulier vervangen
 
         setTimeout(() => {
-          form.outerHTML = newState.outerHTML;
+          form.outerHTML = newState.outerHTML; // Als fallback, formulier alsnog vervangen na animatieduur + beetje extra
         }, successAnimationDuration + 50);
-
-      }, 50);
+      }, 50); 
     }
   });
 }
