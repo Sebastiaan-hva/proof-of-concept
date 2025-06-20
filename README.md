@@ -171,7 +171,7 @@ https://github.com/Sebastiaan-hva/proof-of-concept/blob/4b826675014fda5432cac3e1
 
 ### loading + succes state form
 
-https://github.com/Sebastiaan-hva/proof-of-concept/blob/51da0c9007b4189043f85ad4eb94852d569adef4/views/index.liquid#L162-L208
+https://github.com/Sebastiaan-hva/proof-of-concept/blob/ea4b4afc99c16e7de9c841ce158e076adc32fd85/views/index.liquid#L162-L205
 
 ___
 
