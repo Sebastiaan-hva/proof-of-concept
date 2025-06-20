@@ -1,4 +1,3 @@
-/* test */
 
 /* MARK: Form */
 
@@ -126,27 +125,7 @@ section{
 	margin-left:2%;
 	margin-right:2%;
 	margin-bottom:1em;
-	@media (min-width: 760px) {
-	/* width: 78%; */
-	/* margin-right:10%; */
-	}
-	@media (min-width: 1260px) {
-		/* width: 78%; */
-		/* margin-right:10%; */
-	}
 }
-
-
-
-.house-info{
-
-}
-
-.description{
-
-}
-
-
 
 
 /* MARK: Carousel*/
@@ -369,24 +348,24 @@ li:nth-of-type(3){
     filter: brightness(100%);
   }
   20% {
-    transform: rotate(72deg) scale(1.3); /* Pop out larger */
+    transform: rotate(72deg) scale(1.3); 
     opacity: 1;
-    filter: brightness(150%) drop-shadow(0 0 10px rgba(255, 0, 0, 0.8)); /* Bright glow */
+    filter: brightness(150%) drop-shadow(0 0 10px rgba(255, 0, 0, 0.8)); 
   }
   50% {
-    transform: rotate(180deg) scale(1.1); /* Bounce slightly back */
+    transform: rotate(180deg) scale(1.1); 
     opacity: 1;
-    filter: brightness(100%) drop-shadow(0 0 5px rgba(255, 0, 0, 0.5)); /* Settled glow */
+    filter: brightness(100%) drop-shadow(0 0 5px rgba(255, 0, 0, 0.5)); 
   }
   80% {
-    transform: rotate(300deg) scale(1.05); /* Small final bounce */
+    transform: rotate(300deg) scale(1.05); 
     opacity: 1;
     filter: brightness(100%);
   }
   100% {
-    transform: rotate(360deg) scale(1); /* Final state */
+    transform: rotate(360deg) scale(1); 
     opacity: 1;
-    filter: brightness(100%) drop-shadow(0 0 0 rgba(255, 0, 0, 0)); /* No glow at end */
+    filter: brightness(100%) drop-shadow(0 0 0 rgba(255, 0, 0, 0)); 
   }
 }
 

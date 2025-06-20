@@ -22,7 +22,7 @@
 </form>
 
 <ul class="slider">
-  <li data-label="hubje 1">
+  <li data-label="hub-1">
     {% for item in house.gallery limit: 5 %}
       <picture>
         <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">
@@ -31,7 +31,7 @@
     {% endfor %}
   </li>
 
-  <li data-label="hubje 2">
+  <li data-label="hub-2">
     {% for item in house.gallery limit: 5 %}
       <picture>
         <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">
@@ -40,7 +40,7 @@
     {% endfor %}
   </li>
 
-  <li data-label="hubje 3">
+  <li data-label="hub-3">
     {% for item in house.gallery %}
       <picture>
         <source srcset="https://fdnd-agency.directus.app/assets/{{ item.directus_files_id }}?format=avif" type="image/avif">

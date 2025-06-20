@@ -43,8 +43,6 @@ body{
     --secondary-color-funda-4: #ebf6e3;
     --secondary-color-funda-5: #de737d;
     --secondary-color-funda-6: #599f7e;
-
-    
 }
 
 body{
@@ -58,7 +56,6 @@ h1{
 h1, h2{
     margin-bottom:0.25em;
 }
-
 
 /* /* MARK: Header */
 
@@ -121,9 +118,8 @@ nav {
         position:absolute;
         top:-100%;
         left:0;
-        /* background-color: var(--primary-color-funda-white); */
-        /* background-color: red; */
     }
+
     /* MARK: Mobile menu openen */
     ul:target{
         height:50vh;
@@ -188,7 +184,6 @@ nav {
     }
 
     nav details[open] summary + p {
-        /* position: absolute; */
         top: 100%;
         left: 0;
         z-index: 100;
@@ -218,20 +213,14 @@ nav {
         padding: 0.75em 1em;
         white-space: nowrap;
     }
-    nav details[open] p:first-of-type{
-        /* margin-top:10em; */
-    }
-    nav details[open] p:last-of-type {
-        /* padding-top:1em; */
-    }
-    /* Remove top border from first p */
+
     nav details[open] summary + p {
         border-top: none;
     }
     ul:has details[open]{
         margin-top:7rem;
     }
-    /* Optional hover effect for all p’s */
+
     nav details[open] p:hover {
         background-color: #f2f2f2;
     }
